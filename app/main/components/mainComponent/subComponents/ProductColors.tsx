@@ -7,16 +7,13 @@ const ProductColors = ({ productCode, productHexCodes }: ProductType) => {
   return (
     <div className="flex gap-2 mt-2 justify-center">
       {productHexCodes.map((v, i) => {
+        const hexCode = productHexCodes[i].slice(-6);
         return (
-          <Link key={i} href={`../detail/${productCode}${productHexCodes[i]}`}>
+          <Link key={i} href={`/detail/${productCode}?hex=${hexCode}`}>
             <span
+              className="block mx-[auto] w-3 h-3 rounded-sm"
               style={{
-                display: "block",
-                margin: "0 auto",
-                width: "10px",
-                height: "10px",
                 backgroundColor: `${productHexCodes[i]}`,
-                borderRadius: "2px",
               }}
             ></span>
           </Link>

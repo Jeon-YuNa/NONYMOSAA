@@ -9,9 +9,9 @@ const Header = () => {
 
       <h1>
         <Link href={"/main"}>
-        <MainLogo
-          link={"https://cdn.imweb.me/thumbnail/20250321/8f7bf5da01ea4.png"}
-        />
+          <MainLogo
+            link={"https://cdn.imweb.me/thumbnail/20250323/65ed2d2119e49.png"}
+          />
         </Link>
       </h1>
     </header>

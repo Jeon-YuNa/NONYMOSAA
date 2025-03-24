@@ -14,16 +14,15 @@ const ProductWrap = ({
   productPrice,
 }: ProductType) => {
   if (!productHexCodes) return "";
-const hexCode = productHexCodes[0].slice(-6);
-console.log(hexCode)
-return (
-    
+  const hexCode = productHexCodes[0].slice(-6);
+
+  return (
     <div key={productId} className="mb-10">
       <Link href={`/detail/${productCode}?hex=${hexCode}`}>
         <div className="flex flex-col items-center">
-          <ProductImage productImage={productImage} />
-          <ProductTitle productName={productName} />
-          <ProductPrice productPrice={productPrice} />
+          <ProductImage productImage={productImage!} />
+          <ProductTitle productName={productName!} />
+          <ProductPrice productPrice={productPrice!} />
         </div>
       </Link>
 

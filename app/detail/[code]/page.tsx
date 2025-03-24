@@ -1,5 +1,5 @@
 "use client";
-import { use } from 'react';
+import { use } from "react";
 import { useSearchParams } from "next/navigation";
 import DetailPage from "./components/DetailPage";
 
@@ -11,9 +11,7 @@ const DetailCodePage = ({ params }: { params: Promise<{ code: string }> }) => {
 
   return (
     <>
-      <section className="mt-60">
-        <DetailPage code={code} hex={hex!} />
-      </section>
+      <DetailPage code={code} hex={hex!} />
     </>
   );
 };

@@ -13,7 +13,7 @@ const ProductImage = ({ productImage }: ProductType) => {
     setHoverImg((prev) => 0);
   };
 
-  if (!productImage) return <>이미지없음 ㅅㄱ</>;
+  if (!productImage) return <>이미지없음</>;
 
   return (
     <div className="imgBox relative overflow-hidden">

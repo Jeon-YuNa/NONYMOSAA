@@ -3,7 +3,15 @@ export type ProductType = {
   productId?: string;
   productImage?: string[];
   productName?: string;
-  productPrice?: number;
+  productPrice?: number | string;
   productHexCodes?: string[];
   productCode?: string;
+  productInfo?: string[];
+  productNotice?: string[];
+  productDetails?: string;
+  productMaterials?: string;
+  productOrigin?: string;
+  productManufacturer?: string;
+  productDeliveryMethod?: string;
+  productDeliveryPrice?: number | string;
 };
