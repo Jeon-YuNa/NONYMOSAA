@@ -25,7 +25,7 @@ const DetailCount = ({ productPrice }: ProductType) => {
           수량
         </p>
         <div>
-          <div className="count">
+          <div>
             <span onClick={minusCount}>-</span>
             <span>{count}</span>
             <span onClick={plusCount}>+</span>
