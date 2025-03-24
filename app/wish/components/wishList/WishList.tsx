@@ -16,7 +16,10 @@ const WishList = ({
   toggleHandler,
 }: ProductType & WishListButtonProps) => {
   return (
-    <li className="flex justify-center">
+    <li
+      className="flex justify-between"
+      style={{ borderBottom: "1px solid #eee" }}
+    >
       <div className="flex">
         <WishListImage productImage={productImage} />
         <div className="px-4 py-6">

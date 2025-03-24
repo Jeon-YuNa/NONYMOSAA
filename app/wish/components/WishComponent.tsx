@@ -72,7 +72,7 @@ const WishComponent = () => {
               <WishList
                 key={v.id}
                 {...v}
-                productPrice={+price}
+                productPrice={price}
                 toggleHandler={() => {
                   toggleWishHandler(v.id!);
                 }}
