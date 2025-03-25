@@ -8,7 +8,7 @@ export type ProductType = {
   productCode?: string;
   productInfo?: string[];
   productNotice?: string[];
-  productDetails?: string;
+  productDetails?: string | string[];
   productMaterials?: string;
   productOrigin?: string;
   productManufacturer?: string;

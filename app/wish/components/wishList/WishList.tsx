@@ -27,7 +27,7 @@ const WishList = ({
       style={{ borderBottom: "1px solid #eee" }}
     >
       <Link href={`/detail/${productCode}?hex=${hexCode}`}>
-        <div className="flex">
+        <div className="listForm flex">
           <WishListImage productImage={productImage} />
           <div className="px-4 py-6">
             <WishListTitle productName={productName} />

@@ -2,6 +2,7 @@
 import { use } from "react";
 import { useSearchParams } from "next/navigation";
 import DetailPage from "./components/DetailPage";
+import "../css/media.css";
 
 const DetailCodePage = ({ params }: { params: Promise<{ code: string }> }) => {
   const { code } = use(params);

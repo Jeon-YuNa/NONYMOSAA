@@ -21,7 +21,7 @@ const InfoArticle = ({
   productManufacturer,
 }: ProductType) => {
   return (
-    <article className="w-[50%]">
+    <article>
       <DetailTitle productName={productName} productPrice={productPrice} />
       <DetailInfo
         productCode={productCode}

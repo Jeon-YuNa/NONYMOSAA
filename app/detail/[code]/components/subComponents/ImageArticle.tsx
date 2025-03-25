@@ -3,7 +3,7 @@ import DetailImage from "./img/DetailImage";
 
 const ImageArticle = ({ productImage }: ProductType) => {
   return (
-    <article className="w-[50vw] overflow-hidden">
+    <article className="overflow-hidden">
       <DetailImage productImage={productImage} />
     </article>
   );

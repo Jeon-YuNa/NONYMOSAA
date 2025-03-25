@@ -24,26 +24,27 @@ const DetailPage = ({ code, hex }: DetailPageProps) => {
   console.log(`dataFilter:${dataFilter}`);
 
   if (dataFilter.length === 0) {
-    return <div>상품 준비 중.</div>;
+    return <div id="temporaryPage">상품 준비 중.</div>;
   }
   return (
-    <section className="mt-60 flex px-14 pb-14 gap-6 justify-between">
-      {dataFilter.map((v, i) => {
+    <section id="detail" className="mt-60 px-20 pb-14">
+      {dataFilter.map((v) => {
         const price = v
           .productPrice!.toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        const productDetails = v.productDetails!.replace(/\r\n/g, "<br>");
-        const productMaterials = v.productMaterials!.replace(/\r\n/g, "<br>");
-        console.log(productDetails);
+
+        // let productDetails: string[];
+        // const productMaterials = v.productMaterials!.replace(/\r\n/g, "<br />");
+        // if (typeof v.productDetails == "string") {
+        //   productDetails = v.productDetails.split(/\r\n/g);
+        // } else {
+        //   productDetails = v.productDetails!;
+        // }
+        // console.log(productDetails);
         return (
           <>
-            <ImageArticle key={i} productImage={v.productImage} />
-            <InfoArticle
-              {...v}
-              productPrice={price}
-              productDetails={productDetails}
-              productMaterials={productMaterials}
-            />
+            <ImageArticle productImage={v.productImage} />
+            <InfoArticle {...v} productPrice={price} />
           </>
         );
       })}

@@ -1,0 +1,34 @@
+/* PC */
+.detailMiniSlider > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+.detailMiniSlider .swiper-slide {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  #detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+  }
+  #detail article {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #detail {
+    flex-direction: column;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  #detail article {
+    width: 100%;
+  }
+  #detail article:last-child {
+    margin-top: 8vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
