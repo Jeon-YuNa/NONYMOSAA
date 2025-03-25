@@ -5,11 +5,11 @@ const DetailColors = ({ productCode, productHexCodes }: ProductType) => {
   if (!productHexCodes || !Array.isArray(productHexCodes)) return null;
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 pb-6">
       {productHexCodes.map((v, i) => {
         return (
           <Link
-            key={v[i]}
+            key={i}
             href={`/detail/${productCode}?hex=${v.slice(-6)}`}
             passHref
           >

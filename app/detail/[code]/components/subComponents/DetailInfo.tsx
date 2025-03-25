@@ -1,6 +1,7 @@
 import { ProductType } from "@/app/main/components/mainComponent/productType";
-import DetailDesc from "./subComponents/DetailDesc";
-import DetailColors from "./subComponents/DetailColors";
+import DetailDesc from "./info/DetailDesc";
+import DetailColors from "./info/DetailColors";
+import DetailToggle from "./info/DetailToggle";
 
 const DetailInfo = ({
   productCode,
@@ -10,6 +11,9 @@ const DetailInfo = ({
   productDetails,
   productMaterials,
 }: ProductType) => {
+  if (!productDetails) return "";
+  if (!productMaterials) return "";
+
   return (
     <div className="py-8 mb-16" style={{ borderBottom: "1px solid #eee" }}>
       <DetailDesc
@@ -21,8 +25,8 @@ const DetailInfo = ({
         productCode={productCode}
         productHexCodes={productHexCodes}
       />
-      <p className="text-xs text-neutral-600">{productDetails}</p>
-      <p className="text-xs text-neutral-600">{productMaterials}</p>
+      <DetailToggle text={"Details +"} innerText={productDetails} />
+      <DetailToggle text={"Materials & Care +"} innerText={productMaterials} />
     </div>
   );
 };

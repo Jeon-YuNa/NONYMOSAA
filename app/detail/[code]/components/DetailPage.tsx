@@ -1,8 +1,8 @@
 import { fetchData } from "@/app/main/data/data";
 import { ProductType } from "@/app/main/components/mainComponent/productType";
 import { useEffect, useState } from "react";
-import ImageArticle from "./ImageArticle";
-import InfoArticle from "./InfoArticle";
+import ImageArticle from "./subComponents/ImageArticle";
+import InfoArticle from "./subComponents/InfoArticle";
 type DetailPageProps = {
   code?: string;
   hex: string | null;
@@ -32,16 +32,17 @@ const DetailPage = ({ code, hex }: DetailPageProps) => {
         const price = v
           .productPrice!.toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        const deliveryPrice = v
-          .productDeliveryPrice!.toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        const productDetails = v.productDetails!.replace(/\r\n/g, "<br>");
+        const productMaterials = v.productMaterials!.replace(/\r\n/g, "<br>");
+        console.log(productDetails);
         return (
           <>
-            <ImageArticle productImage={v.productImage} />
+            <ImageArticle key={i} productImage={v.productImage} />
             <InfoArticle
               {...v}
               productPrice={price}
-              productDeliveryPrice={deliveryPrice}
+              productDetails={productDetails}
+              productMaterials={productMaterials}
             />
           </>
         );

@@ -1,15 +1,24 @@
 import { ProductType } from "@/app/main/components/mainComponent/productType";
 import { Swiper as SwiperType } from "swiper";
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/effect-fade";
 
-import { FreeMode, Thumbs, EffectFade } from "swiper/modules";
+import { Thumbs, EffectFade } from "swiper/modules";
 
 const DetailImage = ({ productImage }: ProductType) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
+  const onHover = (i: number) => {
+    if (thumbsSwiper && !thumbsSwiper.destroyed) {
+      console.log(i);
+      thumbsSwiper.update();
+      thumbsSwiper.slideTo(i);
+    }
+  };
+
   return (
     <div className="relative">
       <Swiper
@@ -24,8 +33,8 @@ const DetailImage = ({ productImage }: ProductType) => {
       >
         {productImage?.map((v, i) => {
           return (
-            <SwiperSlide key={productImage[i]}>
-              <img src={productImage[i]} alt="" />
+            <SwiperSlide key={v}>
+              <img src={v} alt="" />
             </SwiperSlide>
           );
         })}
@@ -41,11 +50,15 @@ const DetailImage = ({ productImage }: ProductType) => {
       >
         {productImage?.map((v, i) => {
           return (
-            <SwiperSlide key={productImage[i]} className="!w-fit">
+            <SwiperSlide
+              key={i}
+              className="!w-fit"
+              onMouseEnter={() => onHover(i)}
+            >
               <span className="w-20 h-20 block overflow-hidden relative">
                 <img
                   className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-                  src={productImage[i]}
+                  src={v}
                   alt=""
                 />
               </span>

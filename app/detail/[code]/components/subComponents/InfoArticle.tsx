@@ -1,9 +1,9 @@
 import DetailButton from "@/app/wish/components/detailBtn/Detail.Button";
-import DetailTitle from "./subComponents/DetailTitle";
+import DetailTitle from "./info/DetailTitle";
 import { ProductType } from "@/app/main/components/mainComponent/productType";
 import DetailInfo from "./DetailInfo";
-import DetailOrigin from "./subComponents/DetailOrigin";
-import DetailCount from "./subComponents/DetailCount";
+import DetailOrigin from "./info/DetailOrigin";
+import DetailCount from "./DetailCount";
 
 const InfoArticle = ({
   id,
@@ -31,12 +31,7 @@ const InfoArticle = ({
         productDetails={productDetails}
         productMaterials={productMaterials}
       />
-      {/* <div>
-        <p>{productDetails}</p>
-        <p>{productMaterials}</p>
-      </div> */}
       <DetailOrigin
-        key={productOrigin}
         productOrigin={productOrigin}
         productManufacturer={productManufacturer}
         productDeliveryMethod={productDeliveryMethod}

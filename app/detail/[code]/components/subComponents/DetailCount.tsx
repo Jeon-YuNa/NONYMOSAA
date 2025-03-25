@@ -1,5 +1,7 @@
 import { ProductType } from "@/app/main/components/mainComponent/productType";
 import { useState } from "react";
+import CountButton from "./count/CountButton";
+import CountBtnWrap from "./count/CountBtnWrap";
 
 const DetailCount = ({ productPrice }: ProductType) => {
   const [count, setCount] = useState<number>(1);
@@ -13,29 +15,26 @@ const DetailCount = ({ productPrice }: ProductType) => {
     });
   };
   if (!productPrice) return 0;
-  const formattedPrice = Number(String(productPrice).split(",")[0]);
-  console.log(productPrice);
+  const price = Number(String(productPrice).split(",")[0]);
   return (
     <div>
-      <div className="bg-zinc-100 p-3">
+      <div className="bg-zinc-50 p-4">
         <p
-          className="border-dashed"
-          style={{ borderBottom: "1px dashed #ccc" }}
+          className="text-xs pb-3 mb-3"
+          style={{ borderBottom: "1px dashed #ddd" }}
         >
           수량
         </p>
-        <div>
-          <div>
-            <span onClick={minusCount}>-</span>
-            <span>{count}</span>
-            <span onClick={plusCount}>+</span>
-          </div>
-          <span>₩{formattedPrice * count},000</span>
-        </div>
+        <CountBtnWrap
+          count={count}
+          price={price}
+          plusHandler={plusCount}
+          minusHandler={minusCount}
+        />
       </div>
-      <p className="py-10">
-        <span>총 상품금액({count})</span>{" "}
-        <strong>₩{formattedPrice * count},000</strong>
+      <p className="py-10 flex justify-between">
+        <span className="text-xs text-[#666]">총 상품금액({count})</span>{" "}
+        <strong className="text-sm">₩{price * count},000</strong>
       </p>
     </div>
   );

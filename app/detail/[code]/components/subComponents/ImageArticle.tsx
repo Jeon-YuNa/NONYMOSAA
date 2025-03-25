@@ -1,5 +1,5 @@
 import { ProductType } from "@/app/main/components/mainComponent/productType";
-import DetailImage from "./subComponents/DetailImage";
+import DetailImage from "./img/DetailImage";
 
 const ImageArticle = ({ productImage }: ProductType) => {
   return (

@@ -2,8 +2,8 @@ import { ProductType } from "@/app/main/components/mainComponent/productType";
 
 const DetailOrigin = ({
   productOrigin,
+  productPrice,
   productDeliveryMethod,
-  productDeliveryPrice,
   productManufacturer,
 }: ProductType) => {
   return (
@@ -21,7 +21,10 @@ const DetailOrigin = ({
       </li>
       <li className="text-xs mb-1">
         <strong className="mr-1">배송비</strong>
-        <span>₩{productDeliveryPrice}</span>
+        <span>
+          {Number(productPrice) >= 50000 ? "₩0" : "₩3,000"} (₩50,000원 이상
+          무료배송)
+        </span>
       </li>
     </ul>
   );

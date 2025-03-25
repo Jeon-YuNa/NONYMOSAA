@@ -6,7 +6,7 @@
     gap: 1rem;
   }
 }
-
+/* Mobile */
 @media screen and (max-width: 768px) {
   .productWrap {
     display: grid;
