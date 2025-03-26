@@ -12,7 +12,7 @@ const MainLogo = ({ link }: MainLogoProps) => {
           width={580}
           height={72}
           src={link}
-          alt="나니머스 로고"
+          alt="로고"
         />
       </div>
     </>
