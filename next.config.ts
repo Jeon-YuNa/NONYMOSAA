@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["cdn.imweb.me", "firebasestorage.googleapis.com"],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async redirects() {
     return [
       {

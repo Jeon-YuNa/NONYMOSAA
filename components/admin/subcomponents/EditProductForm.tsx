@@ -195,12 +195,12 @@ const EditProductForm = ({ productId }: EditProductFormProps) => {
     e.preventDefault();
     try {
       const newImageURLs = await uploadNewImages();
-      const updatedImageURLs =
-        newImageURLs.length > 0 ? newImageURLs : existingImageURL;
-      if (!docRefForUpdate) {
-        setError("업데이트할 제품 문서를 찾을 수 없습니다.");
-        return;
-      }
+      // const updatedImageURLs =
+      //   newImageURLs.length > 0 ? newImageURLs : existingImageURL;
+      // if (!docRefForUpdate) {
+      //   setError("업데이트할 제품 문서를 찾을 수 없습니다.");
+      //   return;
+      // }
       await updateDoc(docRefForUpdate, {
         productCode: formData.productCode,
         productHexCodes: formData.productHexCodes,

@@ -28,7 +28,7 @@ const DetailPage = ({ code, hex }: DetailPageProps) => {
   }
   return (
     <section id="detail" className="mt-60 px-20 pb-14">
-      {dataFilter.map((v, i) => {
+      {dataFilter.map((v) => {
         const price = v
           .productPrice!.toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -52,9 +52,8 @@ const DetailPage = ({ code, hex }: DetailPageProps) => {
         // }
         return (
           <>
-            <ImageArticle key={`detailImg${i}`} productImage={v.productImage} />
+            <ImageArticle productImage={v.productImage} />
             <InfoArticle
-              key={`detailInfo${i}`}
               {...v}
               productPrice={price}
               details={details}

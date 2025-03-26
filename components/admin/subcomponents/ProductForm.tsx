@@ -28,8 +28,8 @@ const ProductForm = () => {
   const [productInfo, setProductInfo] = useState("");
   const [productExpectedShippingDate, setProductExpectedShippingDate] =
     useState("");
-  const [productImageFiles, setProductImageFiles] = useState<File[]>([]);
-  const [imageList, setImageList] = useState<string[]>([]);
+  // const [productImageFiles, setProductImageFiles] = useState<File[]>([]);
+  // const [imageList, setImageList] = useState<string[]>([]);
 
   const handleInputChange = (e: any) => {
     setFormData((prev) => ({
