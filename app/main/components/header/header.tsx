@@ -10,7 +10,7 @@ const Header = () => {
       <h1 style={{ display: "flex", justifyContent: "center" }}>
         <Link href={"/main"} style={{ display: "inline-block" }}>
           <MainLogo
-            link={"https://cdn.imweb.me/thumbnail/20241021/b71f086e49061.png"}
+            link={"https://cdn.imweb.me/thumbnail/20250326/25a59b93d501d.png"}
           />
         </Link>
       </h1>
