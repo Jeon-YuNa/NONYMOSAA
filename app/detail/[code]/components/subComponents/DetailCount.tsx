@@ -1,6 +1,5 @@
 import { ProductType } from "@/app/main/components/mainComponent/productType";
 import { useState } from "react";
-import CountButton from "./count/CountButton";
 import CountBtnWrap from "./count/CountBtnWrap";
 
 const DetailCount = ({ productPrice }: ProductType) => {

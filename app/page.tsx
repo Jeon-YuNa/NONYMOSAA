@@ -1,4 +1,4 @@
-import AddProductPage from "./admin/[addproduct]/page";
+import AddProductPage from "./admin/addproduct/page";
 
 export default function Home() {
   return (

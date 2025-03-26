@@ -9,7 +9,7 @@ const DetailColors = ({ productCode, productHexCodes }: ProductType) => {
       {productHexCodes.map((v, i) => {
         return (
           <Link
-            key={i}
+            key={`hexcode${i}`}
             href={`/detail/${productCode}?hex=${v.slice(-6)}`}
             passHref
           >

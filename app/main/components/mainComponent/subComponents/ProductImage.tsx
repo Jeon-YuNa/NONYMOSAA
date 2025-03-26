@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { ProductType } from "../productType";
 import { useState } from "react";
 
@@ -7,10 +6,10 @@ const ProductImage = ({ productImage }: ProductType) => {
   const [hoverImg, setHoverImg] = useState<number>(0);
 
   const hovering = () => {
-    setHoverImg((prev) => 1);
+    setHoverImg(() => 1);
   };
   const hoverOut = () => {
-    setHoverImg((prev) => 0);
+    setHoverImg(() => 0);
   };
 
   if (!productImage) return <>이미지없음</>;

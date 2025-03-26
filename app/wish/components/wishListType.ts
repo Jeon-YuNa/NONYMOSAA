@@ -1,7 +1,7 @@
 export type ProductType = {
   id?: string;
   productId?: string;
-  productImage?: string[];
+  productImage?: string | string[];
   productName?: string;
   productPrice?: number | string;
   productHexCodes?: string[];

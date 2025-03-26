@@ -5,28 +5,24 @@ import DetailToggle from "./info/DetailToggle";
 
 const DetailInfo = ({
   productCode,
-  productInfo,
-  productNotice,
+  info,
+  notice,
   productHexCodes,
-  productDetails,
-  productMaterials,
+  details,
+  materials,
 }: ProductType) => {
-  if (!productDetails) return "";
-  if (!productMaterials) return "";
+  if (!details) return "";
+  if (!materials) return "";
 
   return (
     <div className="py-8 mb-16" style={{ borderBottom: "1px solid #eee" }}>
-      <DetailDesc
-        key={productCode}
-        productInfo={productInfo}
-        productNotice={productNotice}
-      />
+      <DetailDesc info={info} notice={notice} />
       <DetailColors
         productCode={productCode}
         productHexCodes={productHexCodes}
       />
-      <DetailToggle text={"Details +"} innerText={productDetails} />
-      <DetailToggle text={"Materials & Care +"} innerText={productMaterials} />
+      <DetailToggle text={"Details +"} innerText={details} />
+      <DetailToggle text={"Materials & Care +"} innerText={materials} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 interface Data {
   id: string;
-  [key: string]: any; // 다른 필드에 대한 타입을 정의할 수 있습니다.
+  [key: string]: string | string[] | number; // 다른 필드에 대한 타입을 정의할 수 있습니다.
 }
 
 const MainPage = async () => {
@@ -18,7 +18,7 @@ const MainPage = async () => {
     return v.productCategory == "accessories";
   });
   const accessoriesDataArr = accessoriesData.sort(
-    (a, b) => b.productId - a.productId
+    (a, b) => Number(b.productId) - Number(a.productId)
   );
   return (
     <>

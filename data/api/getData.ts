@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { db } from "../../lib/firebase";
+import { firestore } from "@/firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 interface Data {
@@ -12,7 +12,7 @@ export default async function handler(
   res: NextApiResponse<Data[] | { error: string }>
 ) {
   try {
-    const querySnapshot = await getDocs(collection(db, "products"));
+    const querySnapshot = await getDocs(collection(firestore, "products"));
     const data = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),

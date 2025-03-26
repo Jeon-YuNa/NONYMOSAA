@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 export interface Data {
   id: string;
-  [key: string]: any; // 다른 필드에 대한 타입을 정의할 수 있습니다.
+  [key: string]: string | string[] | number; // 다른 필드에 대한 타입을 정의할 수 있습니다.
 }
 
 export const fetchData = async (): Promise<Data[]> => {

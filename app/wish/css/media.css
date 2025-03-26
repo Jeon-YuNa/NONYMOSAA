@@ -14,13 +14,6 @@
     border-right: 0;
   }
   .listImg > div {
-    width: 80% !important;
-    height: auto !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .listImg > div {
     width: 100% !important;
     height: auto !important;
   }

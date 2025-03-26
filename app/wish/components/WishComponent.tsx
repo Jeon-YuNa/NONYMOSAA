@@ -55,6 +55,8 @@ const WishComponent = () => {
     );
   };
 
+  console.log(filteredData);
+
   return (
     <article>
       {filteredData.length > 0 ? (
@@ -70,9 +72,10 @@ const WishComponent = () => {
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return (
               <WishList
-                key={v.id}
+                key={`wisiList${v.id}`}
                 {...v}
                 productPrice={price}
+                productImage={v.productImage![0]}
                 toggleHandler={() => {
                   toggleWishHandler(v.id!);
                 }}

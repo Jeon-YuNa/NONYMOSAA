@@ -4,8 +4,6 @@ import Header from "@/app/main/components/header/header";
 import Footer from "@/app/main/components/footer/footer";
 import "./globals.css";
 import "./main/css/media.css";
-import { Route, Router } from "react-router-dom";
-import Product from "@/app/main/components/mainComponent/Product";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

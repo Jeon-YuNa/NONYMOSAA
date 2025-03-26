@@ -7,10 +7,10 @@ type LeftMenuProps = {
 const MenuText = ({ text }: LeftMenuProps) => {
   const [hover, setHover] = useState("#222");
   const mouseOn = () => {
-    setHover((prev) => "#999");
+    setHover(() => "#999");
   };
   const mouseOut = () => {
-    setHover((prev) => "#222");
+    setHover(() => "#222");
   };
   return (
     <span

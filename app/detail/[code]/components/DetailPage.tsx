@@ -28,23 +28,40 @@ const DetailPage = ({ code, hex }: DetailPageProps) => {
   }
   return (
     <section id="detail" className="mt-60 px-20 pb-14">
-      {dataFilter.map((v) => {
+      {dataFilter.map((v, i) => {
         const price = v
           .productPrice!.toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-        // let productDetails: string[];
-        // const productMaterials = v.productMaterials!.replace(/\r\n/g, "<br />");
-        // if (typeof v.productDetails == "string") {
-        //   productDetails = v.productDetails.split(/\r\n/g);
-        // } else {
-        //   productDetails = v.productDetails!;
+        // const productDetails = "";
+        // if (typeof v.productDetails === "string") {
+        //   const productDetails = v.productDetails!.split("\n");
+        //   console.log(productDetails);
+        //   return productDetails;
         // }
-        // console.log(productDetails);
+        // const productMaterials =
+        //   v.productMaterials?.replace(/\\r\\n|\\n|\\r/g, "\n") ?? "";
+        // const materials = v.productMaterials!.split("\n");
+        const info = v.productInfo!.split("\n");
+        const notice = v.productNotice!.split("\n");
+        const details = v.productDetails!.split("\n");
+        const materials = v.productMaterials!.split("\n");
+        // if (typeof v.productMaterials == "string") {
+        //   const productMaterials = v.productMaterials!.split("\n");
+        //   return productMaterials;
+        // }
         return (
           <>
-            <ImageArticle productImage={v.productImage} />
-            <InfoArticle {...v} productPrice={price} />
+            <ImageArticle key={`detailImg${i}`} productImage={v.productImage} />
+            <InfoArticle
+              key={`detailInfo${i}`}
+              {...v}
+              productPrice={price}
+              details={details}
+              materials={materials}
+              info={info}
+              notice={notice}
+            />
           </>
         );
       })}

@@ -17,7 +17,7 @@ const Button = ({ width, text, bg, state, handler }: ButtonProps) => {
   );
   return (
     <div
-      className="h-14"
+      className="h-14 cursor-pointer"
       style={{
         display: "flex",
         alignItems: "center",

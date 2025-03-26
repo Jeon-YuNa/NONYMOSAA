@@ -9,11 +9,11 @@ const InfoArticle = ({
   id,
   productName,
   productPrice,
-  productDetails,
-  productMaterials,
+  details,
+  materials,
   productCode,
-  productInfo,
-  productNotice,
+  info,
+  notice,
   productHexCodes,
   productOrigin,
   productDeliveryMethod,
@@ -25,11 +25,11 @@ const InfoArticle = ({
       <DetailTitle productName={productName} productPrice={productPrice} />
       <DetailInfo
         productCode={productCode}
-        productInfo={productInfo}
-        productNotice={productNotice}
+        info={info}
+        notice={notice}
         productHexCodes={productHexCodes}
-        productDetails={productDetails}
-        productMaterials={productMaterials}
+        details={details}
+        materials={materials}
       />
       <DetailOrigin
         productOrigin={productOrigin}

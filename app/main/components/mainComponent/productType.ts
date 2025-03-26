@@ -6,10 +6,14 @@ export type ProductType = {
   productPrice?: number | string;
   productHexCodes?: string[];
   productCode?: string;
-  productInfo?: string[];
-  productNotice?: string[];
-  productDetails?: string | string[];
+  productInfo?: string;
+  info?: string[];
+  productNotice?: string;
+  notice?: string[];
+  productDetails?: string;
+  details?: string[];
   productMaterials?: string;
+  materials?: string[];
   productOrigin?: string;
   productManufacturer?: string;
   productDeliveryMethod?: string;

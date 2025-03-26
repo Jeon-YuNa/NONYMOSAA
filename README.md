@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# teamProject
 
-## Getting Started
+#프로젝트 명: [nonymousaa 웹사이트 클론 코딩]
 
-First, run the development server:
+> nonymousaa 웹 사이트를 참고하여 상품 등록, 관리하는 쇼핑몰 사이트를 제작하였습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##목차
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [프로젝트 소개](#프로젝트-소개)
+- [팀원](#팀원)
+- [기술 스택](#기술-스택)
+- [사용법](#사용법)
+- [프로젝트 구조](#프로젝트-구조)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 프로젝트 소개
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[nonymousaa]는 firebase의 사용하여 데이터를 저장하고 저장된 데이터를 활용하여 메인페이지 및 디테일 페이지를 구축하였습니다.
 
-## Learn More
+## 팀원
 
-To learn more about Next.js, take a look at the following resources:
+- **[김형준]**
+- 역할: firebase를 활용하여 데이터베이스 구축
+- **[전유나]**
+- 역할: 메인페이지/디테일페이지/위시페이지 구축
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 기술 스택
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **React**
+- **TypeScript**
+- **NextJS**
+- **Tailwind**
 
-## Deploy on Vercel
+## 사용법
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/admin/addproduct 페이지에서 상품을 등록하고 수정할 수 있습니다.
+메뉴를 통해 카테고리별로 상품을 볼 수 있으며 디테일 페이지의 하트버튼을 클릭하면 wish페이지에 찜하기 해놓은 상품 목록을 확인할 수 있습니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 프로젝트 구조
+
+관리자 페이지
+메인 페이지
+디테일 페이지
+위시 페이지
+
+> **노트:**
+> 처음 사용해 보는 파이어베이스에 대한 걱정이 컸지만 이 프로젝트를 통해 데이터를 활용에 더 익숙해 질 수 있는 계기가 되었습니다.
+
+## 도와주신 분
+
+김수임 🐹
+박준용 🐻
+박준태 🐱
+감사합니다!🤗
+
+# nonymousaa
