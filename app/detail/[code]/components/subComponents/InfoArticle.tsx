@@ -33,6 +33,7 @@ const InfoArticle = ({
       />
       <DetailOrigin
         productOrigin={productOrigin}
+        productPrice={productPrice}
         productManufacturer={productManufacturer}
         productDeliveryMethod={productDeliveryMethod}
         productDeliveryPrice={productDeliveryPrice}
