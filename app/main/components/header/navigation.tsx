@@ -29,7 +29,7 @@ const Navigation = () => {
           <MenuText text={"WISH"} />
         </Link>
         <span className="mx-4">|</span>
-        <Link href={"/cart"}>
+        <Link href={"https://nonymousaa.com/shop_cart"}>
           <MenuText text={"CART"} />
         </Link>
       </div>
